@@ -1,0 +1,27 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel="stylesheet", href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css")
+		link(href='http://fonts.googleapis.com/css?family=Bad+Script&effect=fire-animation' rel='stylesheet' type='text/css')
+	body
+		.container
+			.row
+				.col-xs-10.col-xs-offset-1
+					.jumbotron#mapDisplay
+						.container
+							block magellan
+			.row
+				.col-xs-10.col-xs-offset-1
+					div
+						block navigation
+						h1.mainTitle.font-effect-fire-animation Magellan's Voyage
+							span (1990's web style)
+						block button			
+			.row
+				.col-xs-10.col-xs-offset-1.content
+					block content
+		script(src="http://code.jquery.com/jquery-2.1.0.min.js")
+		block animateBoat
+		block fadeIn

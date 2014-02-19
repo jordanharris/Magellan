@@ -1,0 +1,49 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00b7ff;
+}
+span {
+  font-size: 30px;
+}
+#mapDisplay {
+  background-image: url("../images/magellanMap.jpg");
+  repeat: no-repeat;
+  background-size: cover;
+}
+.jumbotron {
+  height: 450px;
+}
+.portrait {
+  width: 70px;
+  border: 3px solid #fff;
+  position: absolute;
+  -webkit-transition: -webkit-transform 10s;
+  transition: -webkit-transform 10s;
+}
+.location {
+  height: 250px;
+  font-size: 12px;
+}
+.embark {
+  width: 940px;
+  height: 90px;
+  color: #fff;
+  font-size: 60px !important;
+  background-color: none !important;
+}
+.embarkp {
+  background-image: url("../images/ocean.jpg") !important;
+  border-radius: 5px;
+}
+.embarkp:hover {
+  background-image: url("../images/fire.jpg") !important;
+}
+.mainTitle {
+  font-family: "Bad Script";
+  font-size: 80px;
+  width: inherit;
+  text-align: center;
+  margin: 30px auto;
+}

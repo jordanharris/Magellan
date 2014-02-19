@@ -1,0 +1,30 @@
+extends layout
+  
+block content
+  h1 #{locationInfo.location.name}
+  p.location #{locationInfo.location.info}
+block navigation
+  a(href="/"+(locationInfo.location.id-1)+'&prev')
+    button.pull-left.btn.btn-success Previous
+  a(href="/"+(locationInfo.location.id+1)+'&next')
+    button.pull-right.btn.btn-success Next
+block magellan
+  img.portrait.img-circle(src="http://127.0.0.1:3000/images/magellan.jpg")
+
+block fadeIn
+    script
+        | $('.content').css('display','none');
+        | $('.content').fadeIn(1200);
+block animateBoat
+    if (dir === 'next')
+      script 
+             | $('.portrait').css({top:"#{locationInfo.coords[0].top}px",left:"#{locationInfo.coords[0].left}px"}); 
+             | $('.portrait').animate({top:"#{locationInfo.coords[1].top}px",width:"200px"} , 'linear',function(){
+             | $('.portrait').animate({left:"#{locationInfo.coords[1].left}px",width:"70px"}, 'linear');
+             | });
+    else
+          script 
+                 | $('.portrait').css({top:"#{locationInfo.coords[0].top}px",left:"#{locationInfo.coords[0].left}px"}); 
+                 | $('.portrait').animate({left:"#{locationInfo.coords[1].left}px",width:"200px"}, 'linear',function(){
+                 | $('.portrait').animate({top:"#{locationInfo.coords[1].top}px",width:"70px"}, 'linear');
+                 | });
